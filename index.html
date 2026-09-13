@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Septi Dewi Yuliana — Instructional Designer & Learning Experience Developer</title>
+  <meta name="description" content="Portofolio Septi Dewi Yuliana, lulusan Teknologi Pendidikan Universitas Negeri Semarang. Berfokus pada instructional design, pengembangan media pembelajaran interaktif, dan pengalaman belajar digital." />
+  <meta name="author" content="Septi Dewi Yuliana" />
+  <meta name="theme-color" content="#08080f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Septi Dewi Yuliana — Instructional Designer" />
+  <meta property="og:description" content="Instructional Design • Digital Learning Development • Multimedia Learning Media" />
+  <meta property="og:locale" content="id_ID" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='26' fill='%237c5cff'/><text x='50' y='70' font-size='58' font-family='Arial,sans-serif' font-weight='bold' text-anchor='middle' fill='white'>S</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ================= LOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">S</div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- ================= DECOR ================= -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="grid-overlay"></span>
+  </div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ================= SCROLL PROGRESS ================= -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="brand" aria-label="Ke beranda">
+        <span class="brand__mark">S</span>
+        <span class="brand__text">
+          <strong>Septi Dewi Yuliana</strong>
+          <small>Instructional Designer</small>
+        </span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Navigasi utama">
+        <a href="#about" class="nav__link">Tentang</a>
+        <a href="#education" class="nav__link">Pendidikan</a>
+        <a href="#experience" class="nav__link">Pengalaman</a>
+        <a href="#organization" class="nav__link">Organisasi</a>
+        <a href="#certifications" class="nav__link">Sertifikasi</a>
+        <a href="#skills" class="nav__link">Keahlian</a>
+        <a href="#contact" class="nav__link nav__link--cta">Kontak</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema" title="Ganti tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 13.2A8.6 8.6 0 1 1 10.8 3a7 7 0 0 0 10.2 10.2Z" />
+          </svg>
+        </button>
+
+        <button class="icon-btn nav__burger" id="navToggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="pill reveal" data-delay="0">
+            <span class="pill__dot"></span> Tersedia untuk peluang baru
+          </span>
+
+          <h1 class="hero__title reveal" data-delay="60">
+            Halo, saya <span class="grad-text">Septi Dewi Yuliana</span>
+          </h1>
+
+          <p class="hero__role reveal" data-delay="120">
+            <span class="mono">&lt;</span>
+            <span id="typed" class="typed"></span><span class="caret" aria-hidden="true"></span>
+            <span class="mono">/&gt;</span>
+          </p>
+
+          <p class="hero__desc reveal" data-delay="180">
+            Lulusan Teknologi Pendidikan <strong>Universitas Negeri Semarang</strong> yang berfokus pada
+            <em>instructional design</em>, pengembangan konten pembelajaran digital, dan media belajar interaktif.
+            Berpengalaman sebagai <em>Instructional Design Intern</em> di Arsip Nasional Republik Indonesia (ANRI).
+          </p>
+
+          <div class="hero__actions reveal" data-delay="240">
+            <a href="#contact" class="btn btn--primary">
+              <span>Hubungi Saya</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#experience" class="btn btn--ghost">
+              <span>Lihat Pengalaman</span>
+            </a>
+          </div>
+
+          <ul class="hero__meta reveal" data-delay="300">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              Semarang, Indonesia
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+              septidewiyuliana@gmail.com
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" data-delay="200">
+          <div class="orbit-card">
+            <div class="orbit-card__ring"></div>
+            <div class="avatar">
+              <span>SDY</span>
+            </div>
+
+            <span class="float-badge float-badge--1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="M8 3v3M16 3v3M8 12h8"/></svg>
+              Storyboard
+            </span>
+            <span class="float-badge float-badge--2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+              ADDIE
+            </span>
+            <span class="float-badge float-badge--3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18 9 12l4 3 7-8"/><path d="M4 20h16"/></svg>
+              E-Learning
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="container">
+        <div class="stats reveal" data-delay="120">
+          <div class="stat">
+            <span class="stat__num" data-count="676" data-suffix="K+">0</span>
+            <span class="stat__label">Konten Views</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="3" data-suffix="+">0</span>
+            <span class="stat__label">Pengalaman Magang</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="5" data-suffix="">0</span>
+            <span class="stat__label">Sertifikasi</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="2025" data-suffix="" data-raw="true">0</span>
+            <span class="stat__label">Lulusan UNNES</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Gulir ke bawah">
+        <span class="scroll-hint__mouse"><i></i></span>
+      </a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">01 — Tentang</span>
+          <h2 class="section__title">Profil <span class="grad-text">Singkat</span></h2>
+          <p class="section__lead">
+            Merancang pengalaman belajar yang terstruktur, menarik, dan berpusat pada pengguna.
+          </p>
+        </header>
+
+        <div class="about">
+          <article class="card about__text reveal" data-delay="80">
+            <p>
+              Educational Technology graduate from <strong>Universitas Negeri Semarang</strong> with a strong interest in
+              digital learning development, instructional design, and interactive learning media.
+            </p>
+            <p>
+              Experienced as an <strong>Instructional Design Intern</strong> at the National Archives of the Republic of
+              Indonesia (ANRI), contributing to digital learning content development, storyboard creation, and
+              multimedia-based training materials.
+            </p>
+            <p>
+              Skilled in designing engaging, well-structured, and user-centered learning experiences, with strong
+              collaboration, communication, and creative abilities in supporting digital learning solutions.
+            </p>
+
+            <ul class="chips">
+              <li class="chip">Instructional Design</li>
+              <li class="chip">Storyboard</li>
+              <li class="chip">Multimedia Learning</li>
+              <li class="chip">LMS</li>
+              <li class="chip">Articulate Storyline</li>
+              <li class="chip">Canva</li>
+            </ul>
+          </article>
+
+          <div class="about__grid">
+            <article class="card mini-card reveal" data-delay="140">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7l8-4 8 4-8 4-8-4Z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
+              </span>
+              <h3>Instructional Design</h3>
+              <p>ADDIE, Training Needs Analysis, dan evaluasi pembelajaran model Kirkpatrick.</p>
+            </article>
+
+            <article class="card mini-card reveal" data-delay="200">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+              </span>
+              <h3>Digital Learning</h3>
+              <p>Pengembangan konten e-learning, media instruksional, dan video tutorial.</p>
+            </article>
+
+            <article class="card mini-card reveal" data-delay="260">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+              </span>
+              <h3>Kolaborasi</h3>
+              <p>Komunikasi lintas tim, koordinasi program, dan dokumentasi yang rapi.</p>
+            </article>
+
+            <article class="card mini-card reveal" data-delay="320">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m4 16 5-5 4 3 7-8"/><path d="M4 20h16"/></svg>
+              </span>
+              <h3>Evaluasi Program</h3>
+              <p>Menyusun instrumen, laporan evaluasi pelatihan, dan dokumentasi program.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section section--alt" id="education">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">02 — Pendidikan</span>
+          <h2 class="section__title">Latar <span class="grad-text">Pendidikan</span></h2>
+        </header>
+
+        <div class="edu-card card reveal" data-delay="80">
+          <div class="edu-card__badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 4 2.5 9 12 14l9.5-5L12 4Z"/><path d="M6 11.2V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.8"/></svg>
+          </div>
+
+          <div class="edu-card__body">
+            <div class="entry__top">
+              <div>
+                <h3>Universitas Negeri Semarang</h3>
+                <p class="entry__sub">Curriculum and Educational Technology</p>
+              </div>
+              <span class="tag tag--time">09/2020 – 06/2025</span>
+            </div>
+
+            <p class="entry__desc">
+              Studied Curriculum and Educational Technology with a strong focus on instructional design,
+              multimedia-based learning, and learning management systems. Completed various interactive media
+              projects using Adobe, Articulate Storyline, and Canva.
+            </p>
+
+            <p class="entry__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              Semarang, Indonesia
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">03 — Pengalaman</span>
+          <h2 class="section__title">Pengalaman <span class="grad-text">Kerja</span></h2>
+          <p class="section__lead">Kontribusi nyata dalam pengembangan pembelajaran dan konten digital.</p>
+        </header>
+
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card tl-card">
+              <div class="entry__top">
+                <div>
+                  <h3>National Archives of the Republic of Indonesia (ANRI)</h3>
+                  <p class="entry__sub">Instructional Designer Intern</p>
+                </div>
+                <span class="tag tag--time">12/2025 – 06/2026</span>
+              </div>
+
+              <ul class="bullets">
+                <li>Designed and developed multimedia-based learning content by creating storyboards, learning flows, and visual concepts tailored to user needs.</li>
+                <li>Developed instructional materials, tutorial videos, and platform user guides to support learning, training, and knowledge-transfer processes.</li>
+                <li>Enhanced the user learning experience through informative and consistent visual assets.</li>
+              </ul>
+
+              <p class="entry__loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Bogor
+              </p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card tl-card">
+              <div class="entry__top">
+                <div>
+                  <h3>Diklat.Co</h3>
+                  <p class="entry__sub">Freelance Content Creator</p>
+                </div>
+                <span class="tag tag--time">07/2024 – 10/2024</span>
+              </div>
+
+              <ul class="bullets">
+                <li>Developed engaging educational copy tailored for digital training audiences.</li>
+                <li>Collaborated with design team to produce structured and informative content.</li>
+                <li>Contributed to increasing content reach to over <strong>676,000 views</strong>.</li>
+              </ul>
+
+              <p class="entry__loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Semarang, Indonesia
+              </p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card tl-card">
+              <div class="entry__top">
+                <div>
+                  <h3>BBPVP Semarang</h3>
+                  <p class="entry__sub">Program Innovation Intern</p>
+                </div>
+                <span class="tag tag--time">09/2023 – 11/2023</span>
+              </div>
+
+              <ul class="bullets">
+                <li>Managed trainee data to support program implementation.</li>
+                <li>Participated in the development of training curricula, learning modules, instructional materials, and evaluations for vocational programs.</li>
+                <li>Designed and prepared training evaluation reports and program documentation.</li>
+              </ul>
+
+              <p class="entry__loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Semarang, Indonesia
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ORGANIZATION ================= -->
+    <section class="section section--alt" id="organization">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">04 — Organisasi</span>
+          <h2 class="section__title">Kegiatan <span class="grad-text">Organisasi</span></h2>
+        </header>
+
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card tl-card">
+              <div class="entry__top">
+                <div>
+                  <h3>HIMA Teknologi Pendidikan</h3>
+                  <p class="entry__sub">Secretary, Talent &amp; Interest Department</p>
+                </div>
+                <span class="tag tag--time">02/2022 – 01/2023</span>
+              </div>
+
+              <ul class="bullets">
+                <li>Managed departmental administration and coordinated internal communications.</li>
+                <li>Facilitated briefings and clearly explained program responsibilities to team members.</li>
+                <li>Organized student participation in university-level competitions, ensuring smooth coordination.</li>
+              </ul>
+
+              <p class="entry__loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                UNNES
+              </p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card tl-card">
+              <div class="entry__top">
+                <div>
+                  <h3>HIMA Teknologi Pendidikan</h3>
+                  <p class="entry__sub">Staff, BSO Department</p>
+                </div>
+                <span class="tag tag--time">02/2021 – 01/2022</span>
+              </div>
+
+              <ul class="bullets">
+                <li>Supported the implementation of work programs and student activities.</li>
+                <li>Served as field coordinator and master of ceremonies for several organizational events.</li>
+                <li>Contributed to the development and execution of the “One Day with BSO” program.</li>
+              </ul>
+
+              <p class="entry__loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                UNNES
+              </p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card tl-card">
+              <div class="entry__top">
+                <div>
+                  <h3>Youth Creativity</h3>
+                  <p class="entry__sub">Staff, Photography Department</p>
+                </div>
+                <span class="tag tag--time">05/2021 – 04/2022</span>
+              </div>
+
+              <ul class="bullets">
+                <li>Contributed as photographer and videographer for a short film production.</li>
+                <li>Handled documentation for the PPAK FIP 2021 aftermovie production.</li>
+              </ul>
+
+              <p class="entry__loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                UNNES
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">05 — Sertifikasi</span>
+          <h2 class="section__title">Sertifikasi &amp; <span class="grad-text">Penghargaan</span></h2>
+        </header>
+
+        <div class="cert-grid">
+          <article class="card cert reveal" data-delay="0">
+            <span class="cert__year">2026</span>
+            <h3>Maganghub Kemnaker</h3>
+            <p>Instructional Intern — Predicate: <strong>Excellent</strong></p>
+          </article>
+
+          <article class="card cert reveal" data-delay="70">
+            <span class="cert__year">2025</span>
+            <h3>Smart Project Based Learning</h3>
+            <p>Social Media Optimization</p>
+          </article>
+
+          <article class="card cert reveal" data-delay="140">
+            <span class="cert__year">2024</span>
+            <h3>Junior Design Operator</h3>
+            <p>BNSP Certification</p>
+          </article>
+
+          <article class="card cert reveal" data-delay="210">
+            <span class="cert__year">2023</span>
+            <h3>Full Stack Web Development</h3>
+            <p>Independent Study Program</p>
+          </article>
+
+          <article class="card cert reveal" data-delay="280">
+            <span class="cert__year">ETS</span>
+            <h3>TOEFL</h3>
+            <p>Score <strong>457</strong> — Educational Testing Service</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">06 — Keahlian</span>
+          <h2 class="section__title">Keahlian &amp; <span class="grad-text">Tools</span></h2>
+          <p class="section__lead">Kombinasi kemampuan desain instruksional, produksi media, dan kolaborasi tim.</p>
+        </header>
+
+        <div class="skills">
+          <div class="skills__bars card reveal" data-delay="80">
+            <div class="bar" data-level="92">
+              <div class="bar__top"><span>Instructional Design</span><em>92%</em></div>
+              <div class="bar__track"><i></i></div>
+            </div>
+            <div class="bar" data-level="90">
+              <div class="bar__top"><span>Digital Learning Development</span><em>90%</em></div>
+              <div class="bar__track"><i></i></div>
+            </div>
+            <div class="bar" data-level="88">
+              <div class="bar__top"><span>Multimedia &amp; Design Tools</span><em>88%</em></div>
+              <div class="bar__track"><i></i></div>
+            </div>
+            <div class="bar" data-level="90">
+              <div class="bar__top"><span>Collaboration &amp; Communication</span><em>90%</em></div>
+              <div class="bar__track"><i></i></div>
+            </div>
+
+            <div class="langs">
+              <h3 class="minis__title">Bahasa</h3>
+              <div class="lang">
+                <div class="lang__head"><span>Bahasa Indonesia</span><em>Native</em></div>
+                <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+              </div>
+              <div class="lang">
+                <div class="lang__head"><span>English</span><em>Proficient</em></div>
+                <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__grid">
+            <article class="card mini-card reveal" data-delay="140">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h13"/></svg>
+              </span>
+              <h3>Instructional Design</h3>
+              <ul class="bullets bullets--tight">
+                <li>ADDIE Model</li>
+                <li>Training Needs Analysis</li>
+                <li>Learning Evaluation (Kirkpatrick)</li>
+                <li>LMS Management</li>
+              </ul>
+            </article>
+
+            <article class="card mini-card reveal" data-delay="200">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M10 9.5l5 2.5-5 2.5v-5Z"/><path d="M9 21h6"/></svg>
+              </span>
+              <h3>Digital Learning Development</h3>
+              <ul class="bullets bullets--tight">
+                <li>Learning Content Development</li>
+                <li>Instructional Media Development</li>
+                <li>Storyboard Creation</li>
+                <li>E-Learning &amp; Multimedia Learning</li>
+              </ul>
+            </article>
+
+            <article class="card mini-card reveal" data-delay="260">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m14.7 6.3 3 3L8 19H5v-3l9.7-9.7Z"/><path d="M4 21h16"/></svg>
+              </span>
+              <h3>Tools</h3>
+              <div class="tool-tags">
+                <span>Canva</span><span>Articulate Storyline</span><span>CorelDRAW</span>
+                <span>Adobe Creative Suite</span><span>CapCut</span>
+                <span>Microsoft Office</span><span>Google Workspace</span>
+              </div>
+            </article>
+
+            <article class="card mini-card reveal" data-delay="320">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 5.5a3 3 0 0 1 0 5.6M17.5 20c0-2.3-.7-4-2-5.2"/></svg>
+              </span>
+              <h3>Soft Skills</h3>
+              <ul class="bullets bullets--tight">
+                <li>Creativity</li>
+                <li>Leadership</li>
+                <li>Problem Solving</li>
+                <li>Team Collaboration &amp; Adaptability</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">07 — Kontak</span>
+          <h2 class="section__title">Mari <span class="grad-text">Berkolaborasi</span></h2>
+          <p class="section__lead">
+            Terbuka untuk peluang di bidang instructional design, pengembangan konten pembelajaran digital,
+            dan media pembelajaran interaktif.
+          </p>
+        </header>
+
+        <div class="contact">
+          <a class="card contact__card reveal" href="mailto:septidewiyuliana@gmail.com" data-delay="0">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            </span>
+            <span class="contact__label">Email</span>
+            <span class="contact__value">septidewiyuliana@gmail.com</span>
+            <button class="copy-btn" type="button" data-copy="septidewiyuliana@gmail.com" aria-label="Salin email">Salin</button>
+          </a>
+
+          <a class="card contact__card reveal" href="https://wa.me/6281216474634" target="_blank" rel="noopener" data-delay="80">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 12l5 2v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4 5.2 2 2 0 0 1 6 3Z"/></svg>
+            </span>
+            <span class="contact__label">Telepon / WhatsApp</span>
+            <span class="contact__value">0812 1647 4634</span>
+            <span class="copy-btn copy-btn--ghost">Chat</span>
+          </a>
+
+          <div class="card contact__card contact__card--static reveal" data-delay="160">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            </span>
+            <span class="contact__label">Lokasi</span>
+            <span class="contact__value">Semarang, Indonesia</span>
+          </div>
+        </div>
+
+        <div class="cta reveal" data-delay="120">
+          <div class="cta__text">
+            <h3>Punya proyek pembelajaran digital?</h3>
+            <p>Kirimkan pesan dan mari diskusikan solusinya bersama.</p>
+          </div>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="mailto:septidewiyuliana@gmail.com">
+              <span>Kirim Email</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="https://wa.me/6281216474634" target="_blank" rel="noopener"><span>WhatsApp</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--sm">S</span>
+        <div>
+          <strong>Septi Dewi Yuliana</strong>
+          <p>Instructional Designer &amp; Learning Experience Developer</p>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navigasi footer">
+        <a href="#about">Tentang</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+
+      <p class="footer__copy">© <span id="year">2025</span> Septi Dewi Yuliana. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

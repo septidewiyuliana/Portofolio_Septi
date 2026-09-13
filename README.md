@@ -27,13 +27,30 @@ Dibangun dengan HTML, CSS, dan JavaScript murni — tanpa framework, tanpa build
 
 ```
 .
-├── index.html              # Struktur halaman
+├── index.html                        # Struktur halaman
 ├── assets/
-│   ├── css/style.css       # Seluruh styling, tema, dan animasi
-│   └── js/main.js          # Interaksi & animasi
-├── .nojekyll               # Agar GitHub Pages tidak memproses folder berawalan _
+│   ├── css/style.css                 # Seluruh styling, tema, dan animasi
+│   ├── js/main.js                    # Interaksi & animasi
+│   └── img/
+│       ├── septi-portrait.jpg        # Foto profil utama (hero, 900×1125, 4:5)
+│       ├── septi-avatar.jpg          # Foto profil persegi (navbar, footer, og:image)
+│       └── apple-touch-icon.png      # Ikon 180×180 untuk home screen iOS
+├── .nojekyll                         # Agar GitHub Pages tidak memproses folder berawalan _
 └── README.md
 ```
+
+> Foto asli (`Foto Septi Dewi Yuliana.png`, 1,3 MB) tidak ikut di-commit — hanya versi
+> teroptimasi di `assets/img/` yang dipakai website. File asli tetap tersimpan di folder lokal.
+
+## 🖼️ Mengganti foto profil
+
+1. Siapkan foto baru dengan rasio **4:5** (misal 1080×1350).
+2. Buat tiga versi, lalu timpa file di `assets/img/`:
+   - `septi-portrait.jpg` — 900×1125 (untuk hero)
+   - `septi-avatar.jpg` — 600×600, crop persegi pada wajah (navbar, footer, og:image)
+   - `apple-touch-icon.png` — 180×180
+3. Jika rasio foto bukan 4:5, ubah `aspect-ratio` pada `.photo-card` di `style.css`
+   agar foto tidak terpotong.
 
 ## 🚀 Menjalankan secara lokal
 

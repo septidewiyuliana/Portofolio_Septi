@@ -8,3 +8,13 @@ Desktop.ini
 # Logs
 *.log
 npm-debug.log*
+
+# Original source photo — optimized copies live in assets/img/
+Foto Septi Dewi Yuliana.png
+
+# Local test artifacts
+.shots/
+_audit*.html
+_photo-audit.html
+_responsive-audit.html
+_*.js

@@ -351,20 +351,20 @@
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   /* ------------------------------------------------------------------
-     12. Subtle parallax on the hero card (pointer devices only)
+     12. Subtle parallax on the hero photo card (pointer devices only)
   ------------------------------------------------------------------ */
-  var orbit = $(".orbit-card");
+  var photoWrap = $(".photo-wrap");
 
-  if (orbit && finePointer && !reduceMotion) {
+  if (photoWrap && finePointer && !reduceMotion) {
     var hero = $(".hero");
 
     hero.addEventListener("mousemove", function (e) {
       var rect = hero.getBoundingClientRect();
       var px = (e.clientX - rect.left) / rect.width - 0.5;
       var py = (e.clientY - rect.top) / rect.height - 0.5;
-      orbit.style.transform = "perspective(900px) rotateY(" + (px * 9).toFixed(2) + "deg) rotateX(" + (-py * 9).toFixed(2) + "deg)";
+      photoWrap.style.transform = "perspective(900px) rotateY(" + (px * 8).toFixed(2) + "deg) rotateX(" + (-py * 8).toFixed(2) + "deg)";
     });
 
-    hero.addEventListener("mouseleave", function () { orbit.style.transform = ""; });
+    hero.addEventListener("mouseleave", function () { photoWrap.style.transform = ""; });
   }
 })();
